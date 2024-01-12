@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +18,24 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(0, 0, 0);
+}
+
+
+.border-custo:hover {
+  border-bottom-width: 1px;
+
+}
+.underline-custo {
+  text-decoration-line: underline;
+  text-decoration-color: #f49004;
+  /* text-decoration-color: linear-gradient(#f49004, #4b2d03); */
 }

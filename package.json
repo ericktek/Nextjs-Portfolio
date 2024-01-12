@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "next": "14.0.3",
+    "next-google-fonts": "^2.2.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.3"
+    "react-icons": "^4.12.0",
+    "react-scroll": "^1.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
