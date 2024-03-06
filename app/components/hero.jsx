@@ -2,8 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { nunito_sans, poppins } from "../utils/fonts";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { TypeAnimation } from "react-type-animation";
 
-const hero = () => {
+const Hero = () => {
   return (
     <>
       <div className=" px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-24 lg:px-8 lg:py-4">
@@ -23,17 +24,33 @@ const hero = () => {
 
               <h1 className="text-white text-4xl font-bold ">
                 <span className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl">
-                  A FULL STACK DEVELOPER
+                  <TypeAnimation
+                    sequence={[
+                      // Same substring at the start will only be typed out once, initially
+                      "A FULL STACK DEVELOPER",
+                      1000, // wait 1s before replacing "Mice" with "Hamsters"
+                      "WEB DEVELOPER",
+                      1000,
+                      "A DATA SCIENTIST",
+                      1000,
+                      "UI/UX DESIGNER",
+                      1000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    // style={{ fontSize: "2px", display: "inline-block" }}
+                    className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl inline-block"
+                    repeat={Infinity}
+                  />
                 </span>
                 <br />
                 <span className="text-xl">& GRAPHIC DESIGNER</span>
               </h1>
 
-              <p className="text-sm pt-2 font-extralight font-nunito_sans text-gray-500 lg:text-sm md:text-lg">
+              <p className="text-base pt-2 text-justify leading-relaxed font-nunito_sans text-gray-400 lg:text-sm md:text-lg">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Ducimus id nulla laboriosam sapiente quod, quae voluptatum cum
-                minima at aliquam placeat dolor fuga aut eum. Doloremque
-                repellendus mollitia est libero!
+                Ducimus id nulla laboriosam sapiente Ducimus id nulla laboriosam
+                sapiente Ducimus id nulla laboriosam sapiente
               </p>
 
               <a
@@ -62,4 +79,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;

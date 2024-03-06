@@ -8,6 +8,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +17,11 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+.none {
+  appearance:none;
+ 
 }
 
 *{
@@ -30,12 +36,4 @@ body {
 }
 
 
-.border-custo:hover {
-  border-bottom-width: 1px;
 
-}
-.underline-custo {
-  text-decoration-line: underline;
-  text-decoration-color: #f49004;
-  /* text-decoration-color: linear-gradient(#f49004, #4b2d03); */
-}

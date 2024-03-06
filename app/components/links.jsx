@@ -1,28 +1,33 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { IoHomeOutline } from "react-icons/io5";
+import { CgWebsite } from "react-icons/cg";
+import { MdOutlineOnlinePrediction } from "react-icons/md";
+import { SiTaichigraphics } from "react-icons/si";
+import { RiPrinterCloudLine } from "react-icons/ri";
 
 const links = () => {
   const Menu = [
     {
-      title: "ALL",
-      path: "/",
+      icon: <IoHomeOutline />,
+      path: "/portfolio",
     },
     {
-      title: "Websites",
-      path: "/websites",
+      icon: <CgWebsite />,
+      path: "/portfolio/websites",
     },
     {
-      title: "Social Media Branding",
-      path: "/social",
+      icon: <MdOutlineOnlinePrediction />,
+      path: "/portfolio/social",
     },
     {
-      title: "Graphics Design",
-      path: "/graphics",
+      icon: <SiTaichigraphics />,
+      path: "/portfolio/graphics",
     },
     {
-      title: "Printing",
-      path: "/printing",
+      icon: <RiPrinterCloudLine />,
+      path: "/portfolio/printing",
     },
   ];
 
@@ -39,7 +44,7 @@ const links = () => {
           }`}
           key={index}
         >
-          <span>{Menu.title}</span>
+          <span>{Menu.icon}</span>
         </Link>
       ))}
     </>
