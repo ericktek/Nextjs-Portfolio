@@ -1,10 +1,31 @@
-"use client";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Footer from "@/app/components/Footer";
+'use client';
 
-const talk = () => {
+import React from 'react';
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Footer from "app/components/Footer"
+
+const Talk = () => {
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'post',
+        body: new URLSearchParams(data),
+      });
+      if (!response.ok) {
+        throw new Error(`Invalid response: ${response.status}`);
+      }
+      alert('Thanks for contacting us, we will get back to you soon!');
+    } catch (err) {
+      console.error(err);
+      alert("We can't submit the form, try again later?");
+    }
+  }
   return (
     <>
+
       <div className="min-h-screen isolate px-6 py-20 sm:py-28 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-orange-400 sm:text-4xl">
@@ -24,8 +45,7 @@ const talk = () => {
           </div>
         </div>
         <form
-          action="#"
-          method="POST"
+          onSubmit={handleSubmit}
           className="mx-auto mt-6 max-w-xl sm:mt-10"
         >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -39,9 +59,11 @@ const talk = () => {
               <div className="mt-2.5">
                 <input
                   type="text"
-                  name="first-name"
+                  name="fname"
                   id="first-name"
+                  required
                   autoComplete="given-name"
+
                   className="bg-transparent block w-full rounded-md border-0 px-3.5 py-2 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-orange-400 outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -57,9 +79,11 @@ const talk = () => {
               <div className="mt-2.5">
                 <input
                   type="text"
-                  name="last-name"
+                  name="lname"
                   id="last-name"
                   autoComplete="family-name"
+                  required
+
                   className="bg-transparent block w-full rounded-md border-0 px-3.5 py-2 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -77,6 +101,8 @@ const talk = () => {
                   name="company"
                   id="company"
                   autoComplete="organization"
+                  required
+
                   className="bg-transparent block w-full rounded-md border-0 px-3.5 py-2 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -94,6 +120,8 @@ const talk = () => {
                   name="email"
                   id="email"
                   autoComplete="email"
+                  required
+
                   className=" bg-transparent block w-full rounded-md border-0 px-3.5 py-2 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -126,8 +154,10 @@ const talk = () => {
                 </div>
                 <input
                   type="number"
-                  name="phone-number"
+                  name="phone"
                   id="phone-number"
+                  required
+
                   autoComplete="tel"
                   className="bg-transparent block w-full rounded-md border-0 px-3.5 py-2 pl-28 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-500  focus:ring-2 outline-none focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                 />
@@ -147,13 +177,14 @@ const talk = () => {
                   rows={4}
                   className="bg-transparent block w-full rounded-md border-0 px-3.5 py-2 text-gray-100 shadow-sm ring-1 ring-inset ring-gray-600  focus:ring-2 outline-none focus:ring-inset focus:ring-orange-400 sm:text-sm sm:leading-6"
                   defaultValue={""}
+                  required
+
                 />
               </div>
             </div>
           </div>
           <div className="mt-10">
-            <button
-              type="submit"
+            <button type="submit"
               className="block w-full rounded-md bg-orange-400 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-300 outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
             >
               Let's talk
@@ -174,8 +205,11 @@ const talk = () => {
         />
       </div>
       <Footer />
+
     </>
   );
 };
 
-export default talk;
+export default Talk;
+
+

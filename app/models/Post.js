@@ -6,7 +6,6 @@ const postSchema = new Schema({
     title: {
         type: String,
         required: true,
-        unique: true
     },
     shortTitle: {
         type: String,

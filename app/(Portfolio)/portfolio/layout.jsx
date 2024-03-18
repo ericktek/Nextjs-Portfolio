@@ -4,8 +4,8 @@ import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaCheck } from "react-icons/fa6";
-import Links from "@/app/components/Links";
-import Footer from "@/app/components/Footer";
+import Links from "app/components/Links";
+import Footer from "app/components/Footer";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

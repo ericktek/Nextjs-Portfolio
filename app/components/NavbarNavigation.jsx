@@ -5,15 +5,18 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { signOut, useSession } from "next-auth/react";
 
 const NavbarNavigation = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
 
+  const session = useSession();
   return (
     <>
-      <div className=" bg-white/10">
+    
+     <div className=" bg-white/10">
         <div className=" px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-5xl md:px-8 lg:px-8">
           <div className="relative grid items-center grid-cols-2 lg:grid-cols-3 ">
             <Link scroll={false} href="/">
@@ -61,14 +64,39 @@ const NavbarNavigation = ({ children }) => {
                   Portfolio
                 </Link>
               </li>
-              <li
+              
+              { session.status === "authenticated" ? (
+                <ul className="items-center hidden space-x-8 lg:flex">
+                  <li
                 className={`
+                link ${
+                  pathname === "/dashboard"
+                    ? "text-orange-400"
+                    : "cursor-pointer  border-custo hover:border-orange-400 focus:border-b-2 focus:border-orange-400"
+                }`}
+                >
+                <Link href="/dashboard">Dashboard</Link>
+                </li>
+                <li
+                className={"bg-orange-400 px-2 py-1 rounded-sm cursor-pointer  border-custo hover:border-orange-400 focus:border-b-2 focus:border-orange-400"}
+              >
+                <button onClick={signOut}>Logout</button>
+              </li>
+                </ul>
+              ): (
+
+                <li
+                className={`
+                link ${
+                  pathname === "/dashboard"
                     ? "text-orange-400"
                     : "cursor-pointer  border-custo hover:border-orange-400 focus:border-b-2 focus:border-orange-400"
                 }`}
               >
-                <Link href="/login">Admin</Link>
+                <Link href="/dashboard">Admin</Link>
               </li>
+
+              )}
             </ul>
 
             <ul className="items-center hidden ml-auto space-x-8 lg:flex">
@@ -163,11 +191,19 @@ const NavbarNavigation = ({ children }) => {
                             Let's Talk
                           </a>
                         </li>
-                        <li className="flex justify-center items-center  bg-orange-400 font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300  active:border-blue-100 dark:text-gray-200 dark:hover:text-black hover:text-black dark:active:border-gray-600 p-2 rounded-sm ">
-                          <a className="scroll-smooth" href="/login">
-                            Admin
-                          </a>
-                        </li>
+                        {session.status === "authenticated" ? (
+                            <li className="flex justify-center items-center  bg-orange-400 font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300  active:border-blue-100 dark:text-gray-200 dark:hover:text-black hover:text-black dark:active:border-gray-600 p-2 rounded-sm ">
+                              <a className="scroll-smooth font-light">
+                                <button onClick={signOut}>Logout</button>
+                              </a>
+                            </li>
+                          ) : (
+                            <li className="flex justify-center items-center  bg-orange-400 font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300  active:border-blue-100 dark:text-gray-200 dark:hover:text-black hover:text-black dark:active:border-gray-600 p-2 rounded-sm ">
+                              <a className="scroll-smooth font-light" href="/dashboard">
+                                Admin
+                              </a>
+                            </li>
+                          )}
                       </ul>
                     </nav>
                   </div>
@@ -177,8 +213,9 @@ const NavbarNavigation = ({ children }) => {
           </div>
         </div>
       </div>
-
       <div>{children}</div>
+
+
     </>
   );
 };

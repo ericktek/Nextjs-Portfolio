@@ -1,7 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Footer from "@/app/components/Footer";
 import dynamic from "next/dynamic";
+import Footer from "../../components/Footer";
 
 const Page = () => {
   const AnimatedNumbers = dynamic(

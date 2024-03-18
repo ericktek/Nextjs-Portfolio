@@ -17,6 +17,13 @@ async function getData(id) {
 }
 const SinglePage = async ({ params }) => {
   const data = await getData(params.id);
+
+  const date = new Date(data.createdAt)
+
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = date.toLocaleDateString('en-US', options);
+
+
   return (
     <>
       <div className="min-h-screen">
@@ -24,7 +31,7 @@ const SinglePage = async ({ params }) => {
           <div className="mt-8 flex lg:flex-row xl:flex-row lg:flex gap-14 lg:justify-between lg:items-center sm:flex flex-col-reverse">
             <div className="mt-6 lg:w-1/2 lg:mt-0 ">
               <span className="text-xs text-gray-500 ">
-                {data.createdAt?.toString()}
+                {formattedDate}
               </span>
 
               <h2 className="block mt-4 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
@@ -93,7 +100,7 @@ const SinglePage = async ({ params }) => {
 
             <div className="flex">
               <span className="text-xs text-gray-500 ">
-                {data.createdAt?.toString().slice(4, 16)}
+                {formattedDate}
               </span>
             </div>
           </div>

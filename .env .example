@@ -1,0 +1,22 @@
+MONGO=mongodb+srv://ericktek:uQvMbv8qM1GBxgdn@cluster0.4urbnzv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+GOOGLE_CLIENT_ID = 804035420370-5efvhgp1st3oafslgk46hav5m3shojp4.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET = 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
+
+NEXTAUTH_SECRET = "dshhsschbslcwc"
+NEXTAUTH_URL = "http://localhost:3000/"
+
+MY_EMAIL=erickbale360@gmail.com
+MY_PASSWORD=********
+
+# Email address verified in Single Sender Verification
+FROM_EMAIL=from@example.com
+# Email address where you want to send the submissions to
+TO_EMAIL=to@example.com
+
+
+# Sendgrid API key
+SENDGRID_API_KEY=SG.abcdef...
+
+#sendGrid bypass Password:VU1LSF8GCEVBEU86U4KPXFC4
+#SAY5MXN3D4URYPMSANH97M19

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import Footer from "@/app/components/Footer";
-import Pagination from "@/app/components/pagination";
 import { notFound } from "next/navigation";
+import Footer from 'app/components/Footer';
 
-const getData = async () => {
+
+const getData = async (page) => {
   const res = await fetch(`http://localhost:3000/api/posts`, {
     cache: "no-store",
   });
@@ -16,21 +16,24 @@ const getData = async () => {
   return res.json();
 };
 
-const Page = async () => {
-  const data = await getData();
-  console.log(data);
+const Page = async (page) => {
+  // const {posts, count} = await getData(page);
+
+  const posts = await getData(page);
+
+
+  
   return (
     <div>
       <section>
-        <div className="container py-12 px-6 lg:py-20 sm:py-12 mx-auto max-w-5xl">
-          <h2 className="text-center text-4xl xl:text-5xl lg:text-5xl font-bold max-w-4xl mb-6  text-orange-400 sm:text-4xl md:mx-auto">
+        <div className=" container py-12 px-6 lg:py-20 sm:py-12 mx-auto max-w-5xl">
+          <h2 className={`font-poppins text-center text-4xl xl:text-5xl lg:text-5xl font-extrabold max-w-4xl mb-6  text-orange-400 sm:text-4xl md:mx-auto`}>
             Hey, ericktek here!{" "}
             <span className="font-light pl-2 pr-1">
               Discover my stories and creative ideas
             </span>
             .
           </h2>
-
           <div className="bg-[url('/blog-img.jpg')] bg-cover rounded-lg ">
             <Image
               width={500}
@@ -45,7 +48,7 @@ const Page = async () => {
           </h1>
 
           <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-            {data.map((item) => (
+            {posts?.map((item) => (
               <div key={item._id} className="lg:flex">
                 <a
                   className="min-w-max hover:opacity-90 ease-in-out"
@@ -62,7 +65,11 @@ const Page = async () => {
 
                 <div className="flex flex-col justify-between py-6 lg:mx-6">
                   <span className="text-xs text-gray-500 ">
-                    {item.createdAt?.toString()}
+                  {new Date(item.createdAt).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
                   </span>
                   <a
                     href={`/blog/${item._id}`}
@@ -72,11 +79,12 @@ const Page = async () => {
                   </a>
 
                   <div className="relative mt-8 flex items-center gap-x-4">
-                    <img
-                      src="https://images.unsplash.com/photo-1507036066871-b7e8032b3dea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      // src={user.image ||  "/avatar.jpg"}
-                      alt=""
-                      className="h-10 w-10 rounded-full object-cover bg-gray-50"
+                    <Image
+                      src="/avatar.png"
+                      alt={item.post}
+                      width={50}
+                      height={50}
+                      className="h-10 w-10 opacity-80 rounded-full object-cover bg-gray-50"
                     />
                     <div className="text-sm leading-6">
                       <p className="font-semibold text-gray-900">
@@ -96,7 +104,6 @@ const Page = async () => {
           </div>
         </div>
       </section>
-      <Pagination />
       <Footer />
     </div>
   );

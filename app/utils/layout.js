@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import "./globals.css";
-import { nunito_sans } from './utils/fonts';
+import { roboto } from './utils/fonts';
 import React from 'react';
 
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <link rel="icon" href='/favicon.png' sizes="any" />
       </head>
     
-      <body className={nunito_sans}>
+      <body className={roboto}>
           {children}
       </body>
     </html>

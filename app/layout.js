@@ -4,6 +4,8 @@ import { nunito_sans } from './utils/fonts';
 import React from 'react';
 import BackToTopButton from './components/backToTopButton';
 import NavbarNavigation from './components/NavbarNavigation';
+import AuthProvider from './components/AuthProvider';
+import { SessionProvider } from 'next-auth/react';
 
 
 const inter = Inter({ subsets: ['latin']})
@@ -23,13 +25,13 @@ export default function RootLayout({ children }) {
       <link rel="icon" href='/favico.png' sizes="any" />
       </head>
       <body className={nunito_sans}>
-     
+      <AuthProvider>  
       <NavbarNavigation />
-
       <div className='min-h-screen'>
           {children}
           </div>
-      <BackToTopButton />
+          <BackToTopButton />
+          </AuthProvider> 
       </body>
     </html>
   )

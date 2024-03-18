@@ -12,22 +12,27 @@ const links = () => {
     {
       icon: <IoHomeOutline />,
       path: "/portfolio",
+      name: "portfolio",
     },
     {
       icon: <CgWebsite />,
       path: "/portfolio/websites",
+      name: "websites",
     },
     {
       icon: <MdOutlineOnlinePrediction />,
       path: "/portfolio/social",
+      name: "social",
     },
     {
       icon: <SiTaichigraphics />,
       path: "/portfolio/graphics",
+      name: "graphics",
     },
     {
       icon: <RiPrinterCloudLine />,
       path: "/portfolio/printing",
+      name: "printing",
     },
   ];
 
@@ -38,13 +43,16 @@ const links = () => {
       {Menu.map((Menu, index) => (
         <Link
           href={Menu.path}
-          className={`font-extralight hover:bg-orange-500 rounded-md p-3 cursor-pointer ${
+          className={`font-extralight hover:bg-orange-500 rounded-md p-3 px-4 cursor-pointer ${
             pathName === Menu.path &&
             "bg-orange-500 rounded-md  font-base cursor-pointer"
           }`}
           key={index}
         >
-          <span>{Menu.icon}</span>
+          <div class="tooltip">
+          <span className="text-xl">{Menu.icon}</span>
+            <span class="tooltiptext">{Menu.name}</span>
+          </div>
         </Link>
       ))}
     </>
