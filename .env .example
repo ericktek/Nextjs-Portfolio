@@ -6,17 +6,14 @@ GOOGLE_CLIENT_SECRET = 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
 NEXTAUTH_SECRET = "dshhsschbslcwc"
 NEXTAUTH_URL = "http://localhost:3000/"
 
-MY_EMAIL=erickbale360@gmail.com
-MY_PASSWORD=********
-
 # Email address verified in Single Sender Verification
-FROM_EMAIL=from@example.com
-# Email address where you want to send the submissions to
-TO_EMAIL=to@example.com
+FROM_EMAIL=erickbale360@gmail.com
 
+# Email address where you want to send the submissions to
+TO_EMAIL=erickbale360@gmail.com
 
 # Sendgrid API key
-SENDGRID_API_KEY=SG.abcdef...
+SENDGRID_API_KEY=WMV4MUGFXSASSG3HV6ERPLNX
 
-#sendGrid bypass Password:VU1LSF8GCEVBEU86U4KPXFC4
-#SAY5MXN3D4URYPMSANH97M19
+
+# RECOVERY_CODE = WMV4MUGFXSASSG3HV6ERPLNX

@@ -48,8 +48,14 @@ const NavbarNavigation = ({ children }) => {
                 </Link>
               </li>
 
-              <li className="cursor-pointer border-custo hover:border-orange-400 focus:border-b-2 focus:border-orange-400">
-                <Link href="/blog/" className="scroll-smooth">
+              <li 
+              
+              className={`link ${
+                pathname === "/blog"
+                  ? "text-orange-400"
+                  : "cursor-pointer  border-custo hover:border-orange-400 focus:border-b-2 focus:border-orange-400"
+              }`}>
+              <Link href="/blog/" className="scroll-smooth">
                   Blog
                 </Link>
               </li>
