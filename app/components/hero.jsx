@@ -26,9 +26,8 @@ const Hero = () => {
                 <span className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl">
                   <TypeAnimation
                     sequence={[
-                      // Same substring at the start will only be typed out once, initially
                       "A FULL STACK DEVELOPER",
-                      1000, // wait 1s before replacing "Mice" with "Hamsters"
+                      1000,
                       "WEB DEVELOPER",
                       1000,
                       "A DATA SCIENTIST",
@@ -67,7 +66,7 @@ const Hero = () => {
           <div>
             <Image
               className="object-cover object-center mx-auto rounded-lg "
-              src="/hero-image.png "
+              src={"/images/hero.png"}
               width={500}
               height={500}
               alt="Hero Image"

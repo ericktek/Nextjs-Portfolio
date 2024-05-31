@@ -40,7 +40,7 @@ const partnerShip = () => {
               <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
                 <Image
                   className="object-cover object-center mx-auto rounded-lg "
-                  src="/partiner-image.jpg "
+                  src={"/images/partiner.jpg"}
                   width={1200}
                   height={1200}
                   alt="Hero Image"
