@@ -1,28 +1,56 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 import Image from "next/image";
 import SplitLongParagraphs from "../../components/SplitLongParagraphs";
 import { notFound } from "next/navigation";
+import { useSession } from "next-auth/react";
 
-async function getData(id) {
+async function fetchPostData(id) {
   const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
     cache: "no-store",
   });
 
   if (!res.ok) {
-    return notFound();
+    throw new Error('Post not found');
   }
 
   return res.json();
 }
-const SinglePage = async ({ params }) => {
-  const data = await getData(params.id);
 
-  const date = new Date(data.createdAt)
+const SinglePage = ({ params }) => {
+  const { data: session, status } = useSession();
+  const [postData, setPostData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const data = await fetchPostData(params.id);
+        setPostData(data);
+      } catch (error) {
+        setError(true);
+        notFound();
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadData();
+  }, [params.id]);
+
+  if (loading) {
+    return <p className="container max-w-5xl px-8 py-10 mx-auto">Loading...</p>;
+  }
+
+  if (error || !postData) {
+    return <p>Post not found</p>;
+  }
+
+  const date = new Date(postData.createdAt);
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const formattedDate = date.toLocaleDateString('en-US', options);
-
 
   return (
     <>
@@ -35,11 +63,11 @@ const SinglePage = async ({ params }) => {
               </span>
 
               <h2 className="block mt-4 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-                {data.title}{" "}
+                {postData.title}
               </h2>
 
               <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
-                {data.shortTitle}
+                {postData.shortTitle}
               </p>
 
               <div className="flex items-center mt-6">
@@ -47,27 +75,29 @@ const SinglePage = async ({ params }) => {
                   width={500}
                   height={500}
                   className="object-cover object-center w-10 h-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                  src="/avatar.png"
                   alt=""
                 />
 
-                <div className="mx-4">
-                  <h1 className="text-sm text-gray-700 dark:text-gray-200">
-                    ericktek
-                  </h1>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Software Engineer
-                  </p>
-                </div>
+                {session && (
+                  <div className="mx-4">
+                    <h1 className="text-sm text-gray-700 dark:text-gray-200">
+                      {session.user.name}
+                    </h1>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      {session.user.email}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
-            <div className="">
+            <div>
               <Image
                 width={500}
                 height={500}
                 className="object-cover w-full rounded-xl h-72 md:h-64 lg:h-72"
-                src={data.image}
-                alt=""
+                src={postData.image}
+                alt={postData.title}
               />
             </div>
           </div>
@@ -76,7 +106,7 @@ const SinglePage = async ({ params }) => {
               In details
             </h1>
             <SplitLongParagraphs>
-              <p>{data.desc}</p>
+              <p>{postData.desc}</p>
             </SplitLongParagraphs>
           </div>
           <div className="flex justify-between items-center mt-6">
@@ -85,19 +115,20 @@ const SinglePage = async ({ params }) => {
                 width={500}
                 height={500}
                 className="object-cover object-center w-10 h-10 rounded-full"
-                src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                alt=""
+                src="/avatar.png"
+                alt="avatar"
               />
-              <div className="mx-4">
-                <h1 className="text-sm text-gray-700 dark:text-gray-200">
-                  Author
-                </h1>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  Erick Lema
-                </p>
-              </div>{" "}
+              {session && (
+                <div className="mx-4">
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">
+                    {session.user.name}
+                  </h1>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {session.user.email}
+                  </p>
+                </div>
+              )}
             </div>
-
             <div className="flex">
               <span className="text-xs text-gray-500 ">
                 {formattedDate}

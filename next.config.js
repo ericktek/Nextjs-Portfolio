@@ -21,6 +21,18 @@ const nextConfig = {
           port: '',
           // pathname: '/account123/**',
         },
+        {
+          protocol: 'https',
+          hostname: 'upload.wikimedia.org',
+          port: '',
+          // pathname: '/account123/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'encrypted-tbn0.gstatic.com',
+          port: '',
+          // pathname: '/account123/**',
+        },
       ],
     },
 
