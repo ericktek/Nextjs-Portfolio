@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { useSession } from "next-auth/react";
 
 async function fetchPostData(id) {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}${id}`, {
+  const res = await fetch(`https://ericktek.vercel.app/api/posts/${id}`, {
     cache: "no-store",
   });
 

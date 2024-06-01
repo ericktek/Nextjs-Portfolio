@@ -6,7 +6,8 @@ import Footer from 'app/components/Footer';
 import { useSession } from "next-auth/react";
 
 const fetchPosts = async () => {
-  const res = await fetch(`${process.env.NEXTAUTH_URL}`, {
+  const res = await fetch(`https://ericktek.vercel.app/api/posts`, {
+
     cache: "no-store",
   });
 
@@ -43,6 +44,8 @@ const Page = () => {
   }
 
   return (
+
+    
     <div>
       <section>
         <div className="container py-12 px-6 lg:py-20 sm:py-12 mx-auto max-w-5xl">
