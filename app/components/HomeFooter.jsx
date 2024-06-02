@@ -29,9 +29,7 @@ const footer = () => {
                   Hi, Meet ericktek and statech
                 </p>
                 <p className="text-xs font-sans leading-relaxed tracking-widest  text-white/50">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
-                  aliquam fugit asperiores, voluptatibus, fuga explicabo
-                  voluptates quos adipisci
+                Specializing in web and graphic design, UI/UX design, and data analysis, we combine creativity and technical expertise to deliver exceptional solutions.
                 </p>
                 <div className="mt-4 text-sm text-white/80">
                   <div className="flex items-center mt-1 space-x-3">

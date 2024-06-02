@@ -38,17 +38,15 @@ const printing = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/printing-1.jpg"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
+                DTF Printing
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
+               ericktek utilizes Direct-to-Film (DTF) printing technology to create vibrant and durable prints on various substrates. This innovative technique ensures high-resolution images with excellent color reproduction, making it ideal for custom apparel, signage, and promotional items.
                 </p>
               </div>
             </div>
@@ -57,17 +55,14 @@ const printing = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/printing-3.jpg"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">On-field Staff</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
-                </p>
+                ericktek's CEO leads by example, overseeing custom t-shirt printing at the workshop. With hands-on dedication and a focus on quality, our CEO ensures every shirt meets our high standards, reflecting our commitment to excellence and client satisfaction.
+                               </p>
               </div>
             </div>
           </a>
@@ -80,17 +75,15 @@ const printing = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/printing-2.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
-                </p>
+                T-shirt Printing         
+                       </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
+                With expertise in t-shirt printing, ericktek offers custom solutions for businesses, events, and organizations. Using state-of-the-art printing methods and quality materials, we deliver high-quality prints that are long-lasting and eye-catching, perfect for branding and marketing purposes.
                 </p>
               </div>
             </div>
@@ -99,16 +92,13 @@ const printing = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/cup.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">Cup Printing</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
+                Offering custom designs and branding solutions for businesses and events. Using advanced printing techniques and high-quality materials, we create personalized cups that promote brand visibility and leave a lasting impression on customers.
                 </p>
               </div>
             </div>

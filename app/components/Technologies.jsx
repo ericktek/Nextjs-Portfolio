@@ -56,8 +56,7 @@ const Technologies = () => {
                   </h1>
                   <div>
                     <p className="leading-relaxed mb-3">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
+                    A powerful React framework for building fast and scalable web applications with server-side rendering and static site generation capabilities.
                     </p>
                   </div>
                   <div className="flex items-center flex-wrap ">
@@ -93,8 +92,7 @@ const Technologies = () => {
                   </h1>
                   <div>
                     <p className="leading-relaxed mb-3">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
+                    A progressive JavaScript framework for building user interfaces, known for its simplicity, flexibility, and performance.
                     </p>
                   </div>
                   <div className="flex items-center flex-wrap">
@@ -130,8 +128,7 @@ const Technologies = () => {
                   </h1>
                   <div>
                     <p className="leading-relaxed mb-3">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
+                    A robust PHP framework for web application development, offering elegant syntax, powerful tools, and comprehensive features for building modern web applications.
                     </p>
                   </div>
                   <div className="flex items-center flex-wrap ">

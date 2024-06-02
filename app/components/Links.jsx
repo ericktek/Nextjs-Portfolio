@@ -40,19 +40,21 @@ const links = () => {
 
   return (
     <>
-      {Menu.map((Menu, index) => (
+       {Menu.map((menuItem, index) => (
         <Link
-          href={Menu.path}
+          href={menuItem.path}
           className={`font-extralight hover:bg-orange-500 rounded-md p-3 px-4 cursor-pointer ${
-            pathName === Menu.path &&
-            "bg-orange-500 rounded-md  font-base cursor-pointer"
+            pathName === menuItem.path && 'bg-orange-500 rounded-md font-base cursor-pointer'
           }`}
           key={index}
         >
-          <div class="tooltip">
-          <span className="text-xl">{Menu.icon}</span>
-            <span class="tooltiptext">{Menu.name}</span>
-          </div>
+        
+
+
+          <div className='has-tooltip'>
+  <span className='tooltip rounded shadow-lg p-1 bg-gray-100 text-gray-800 -mt-8'>{menuItem.name}</span>
+  {menuItem.icon}
+</div>
         </Link>
       ))}
     </>

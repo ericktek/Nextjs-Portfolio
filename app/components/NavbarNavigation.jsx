@@ -113,7 +113,7 @@ const NavbarNavigation = ({ children }) => {
                 <MdKeyboardArrowRight className="w-4 h-4 font-thin " />
               </li>
             </ul>
-            <div className="ml-auto lg:hidden">
+            <div className="ml-auto lg:hidden z-50">
               <button
                 aria-label="Open Menu"
                 title="Open Menu"
@@ -227,3 +227,4 @@ const NavbarNavigation = ({ children }) => {
 };
 
 export default NavbarNavigation;
+

@@ -32,8 +32,7 @@ const Talk = () => {
             Contact
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-100">
-            Aute magna irure deserunt veniam aliqua magna enim voluptate.
-          </p>
+          For inquiries or collaborations, feel free to reach out!          </p>
           <div className="flex items-center justify-center space-x-2 mt-12">
             <span className="w-1/5 border-b dark:border-gray-600 lg:w-1/5"></span>
 

@@ -35,17 +35,15 @@ const socialMediaBrand = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80 "
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/mouse-2.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
+                  Electronic device Promotion
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
+                Engaging poster designs to promote electronic devices such as smartphones, laptops, tablets, and gadgets.
                 </p>
               </div>
             </div>
@@ -57,16 +55,14 @@ const socialMediaBrand = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80 "
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/cupsocial.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">Printing</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
+                Professional poster designs optimized for printing on various materials, sizes, and formats.
+Collaboration with printing vendors to ensure optimal print quality and color accuracy.
                 </p>
               </div>
             </div>
@@ -81,17 +77,15 @@ const socialMediaBrand = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/cap.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
+                  Seasonal Promotions
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
+                Seasonally themed poster designs to coincide with holidays, special occasions, or seasonal promotions.
                 </p>
               </div>
             </div>
@@ -100,16 +94,14 @@ const socialMediaBrand = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/park.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">Tourism</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
+                Captivating poster designs showcasing tourist destinations, attractions, and experiences.
+Emphasis on visual storytelling and aspirational imagery to inspire travel and exploration.
                 </p>
               </div>
             </div>
@@ -118,17 +110,15 @@ const socialMediaBrand = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/smart_watch-1.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Harvesters
+                  Poster design
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Bruegel’s fanfare for the common man is considered one of the
-                  defining works of Western art. This composition was one of six
-                  created on the theme of the seasons.
+                specializes in creating captivating poster designs that grab attention and effectively convey messages.
                 </p>
               </div>
             </div>

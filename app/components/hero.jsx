@@ -46,10 +46,8 @@ const Hero = () => {
                 <span className="text-xl">& GRAPHIC DESIGNER</span>
               </h1>
 
-              <p className="text-base pt-2 text-justify leading-relaxed font-nunito_sans text-gray-400 lg:text-sm md:text-lg">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Ducimus id nulla laboriosam sapiente Ducimus id nulla laboriosam
-                sapiente Ducimus id nulla laboriosam sapiente
+              <p className="text-sm pt-2  font-nunito_sans text-gray-500 ">
+              A dedicated full stack developer and graphic designer with a passion for crafting exceptional digital experiences. With a keen eye for design and a knack for coding, I specialize in bringing ideas to life through seamless integration of technology and aesthetics.
               </p>
 
               <a

@@ -41,10 +41,8 @@ const Services = () => {
           </div>
           <div className="pt-20">
             <h1 className="font-base text-lg ">GRAPHICS DESIGN</h1>
-            <p className="font-thin text-sm text-gray-400 pt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              aliquam ipsa et sunt incidunt laboriosam fugit, excepturi
-              cupiditate qui veniam.
+            <p className="font-light font-poppins  text-gray-400 pt-4">
+            I specialize in crafting visually striking designs that capture attention and effectively communicate messages. With a keen eye and a passion for creativity, I bring brands to life through thoughtful graphic solutions.
             </p>
           </div>
         </motion.div>
@@ -57,10 +55,8 @@ const Services = () => {
           </div>
           <div className="pt-24">
             <h1 className="font-base text-lg ">WEBSITE DESIGN</h1>
-            <p className="font-thin text-sm text-gray-400 pt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              aliquam ipsa et sunt incidunt laboriosam fugit, excepturi
-              cupiditate qui veniam.
+            <p className="font-light font-poppins text-gray-400 pt-4">
+            I create visually captivating and user-friendly websites that effectively convey brand identities and captivate audiences. With expertise in design and user experience principles.
             </p>
           </div>
         </motion.div>
@@ -72,11 +68,9 @@ const Services = () => {
             <ImMakeGroup className="w-20 h-20 pt-2" />
           </div>
           <div className="pt-20">
-            <h1 className="font-base text-lg ">UI/UX DESIGN</h1>
-            <p className="font-thin text-sm text-gray-400 pt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              aliquam ipsa et sunt incidunt laboriosam fugit, excepturi
-              cupiditate qui veniam.
+            <h1 className="font-base font-poppins text-lg ">UI/UX DESIGN</h1>
+            <p className="font-light text-gray-400 pt-4">
+            I specialize in creating intuitive and visually appealing user interfaces that enhance user experiences. I design interfaces that engage and delight users while achieving business objectives.
             </p>
           </div>
         </motion.div>

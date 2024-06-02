@@ -7,7 +7,6 @@ import { useSession } from "next-auth/react";
 
 const fetchPosts = async () => {
   const res = await fetch(`https://ericktek.vercel.app/api/posts`, {
-
     cache: "no-store",
   });
 
@@ -30,6 +29,7 @@ const Page = () => {
         setPosts(data);
       } catch (error) {
         console.error(error);
+        
         notFound();
       } finally {
         setLoading(false);
@@ -44,15 +44,13 @@ const Page = () => {
   }
 
   return (
-
-    
     <div>
       <section>
         <div className="container py-12 px-6 lg:py-20 sm:py-12 mx-auto max-w-5xl">
           <h2 className="font-poppins text-center text-4xl xl:text-5xl lg:text-5xl font-extrabold max-w-4xl mb-6 text-orange-400 sm:text-4xl md:mx-auto">
             Hey, ericktek here!
             <span className="font-light pl-2 pr-1">
-              Discover my stories and creative ideas
+              Discover stories and creative ideas
             </span>
             .
           </h2>
@@ -108,11 +106,11 @@ const Page = () => {
                         <p className="font-semibold text-gray-900">
                           <a className="text-gray-500 dark:text-gray-400">
                             <span className="absolute inset-0" />
-                            {session?.user?.name}
+                            {item.username}
                           </a>
                         </p>
                         <p className="text-xs inline-block flex-none text-gray-500 overflow-ellipsis">
-                          {session?.user?.email}
+                          {item.email}
                         </p>
                       </div>
                     </div>

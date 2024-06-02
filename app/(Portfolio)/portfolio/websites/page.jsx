@@ -38,18 +38,17 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/figma.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
+                  Figma design
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
-                </p>
+                A collaborative interface design tool, to create stunning visual designs and prototypes. By utilizing Figma, we deliver high-quality designs that meet your specific requirements and exceed your expectations.
+
+</p>
               </div>
             </div>
           </a>
@@ -57,16 +56,14 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/website.jpg"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">Web development</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
+                We crafts responsive websites that adapt perfectly to all devices. From desktops to smartphones, our designs ensure a seamless browsing experience for your audience.
+
                 </p>
               </div>
             </div>
@@ -80,18 +77,15 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/weather.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
+                  Mobile development
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
-                </p>
+                Prioritizing the user experience on smartphones and tablets. Our designs are optimized for smaller screens, ensuring seamless navigation and engagement for mobile users.                </p>
               </div>
             </div>
           </a>
@@ -99,16 +93,14 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/nextjs.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">Nextjs</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
+                A powerful React framework for building fast and scalable web applications with server-side rendering and static site generation capabilities.
+
                 </p>
               </div>
             </div>

@@ -1,26 +1,36 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const {Schema} = mongoose
-
-const postSchema = new Schema({
+const PostSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
     },
     shortTitle: {
         type: String,
-        min: 10,
-        max: 30
-    },
-    desc: {
-        type: String,
-        required: true
+        required: true,
     },
     image: {
         type: String,
-        required: false
-    }
-}, { timestamps: true });
+        required: true,
+    },
+    desc: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    username: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+});
 
+const Post = mongoose.models.Post || mongoose.model('Post', PostSchema);
 
-export default mongoose.models.Post || mongoose.model("Post", postSchema);
+export default Post;

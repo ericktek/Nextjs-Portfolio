@@ -36,7 +36,7 @@ const layout = ({ children }) => {
   return (
     <>
       <div className="flex flex-row">
-        <div class="lg:basis-28 sm:basis-0 ml-6 mt-12">
+        <div className="lg:basis-28 sm:basis-0 ml-6 mt-12">
           <div className="fixed sm:bg-white/10 rounded-lg p-2">
             <ul className="lg:flex lg:flex-col  lg:items-center lg:justify-center lg:gap-6 md:flex md:flex-col  md:items-center md:justify-center md:gap-4  hidden ">
               <Links />
@@ -108,8 +108,8 @@ const layout = ({ children }) => {
           {children}
         </div>
 
-        <div class="lg:basis-28 sm:basis-0">
-          <div class="flex flex-col h-screen justify-center items-center">
+        <div className="lg:basis-28 sm:basis-0">
+          <div className="flex flex-col h-screen justify-center items-center">
             <h1 className="hidden mr-12 fixed transform -rotate-90 xl:flex lg:flex text-white/10 font-semibold text-2xl justify-center items-center ">
               PORTFOLIO
             </h1>

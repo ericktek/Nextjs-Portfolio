@@ -15,8 +15,17 @@ export const GET = async (request) => {
         const posts = await Post.find(username && {username}).sort({ createdAt: -1 });
 
 
+        // Map posts to include creator's information
+      const postsWithCreator = posts.map(post => ({
+        ...post.toObject(),
+        creator: {
+            username: post.username,
+            email: post.email
+        }
+      }));
+      
         // Return JSON response with fetched posts
-        return new NextResponse(JSON.stringify(posts), { status: 200 });
+        return new NextResponse(JSON.stringify(postsWithCreator), { status: 200 });
 
     } catch (error) {
 
@@ -29,6 +38,7 @@ export const GET = async (request) => {
 export const POST = async (request) => {
 
     const body = await request.json()
+
 
     const newPost = new Post(body)
 

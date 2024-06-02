@@ -40,18 +40,16 @@ const page = () => {
           >
             <img
               className="object-cover w-full h-56 md:h-64 xl:h-80 "
-              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src={"/portfolio/graphic-1.jpg"}
+
               alt=""
             />
             <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-              <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+              <p className="mb-4 text-lg font-bold text-gray-100">Color mixing</p>
               <p className="text-sm tracking-wide text-gray-300">
-                Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                Nouveau.
+              At the heart of our design process lie color mixing techniques. We believe that harmonious color schemes are essential for evoking desired emotions and effectively conveying brand messages.  
               </p>
-            </div>
+               </div>
           </motion.div>
         </a>
         <a aria-label="View Item" className="cursor-pointer">
@@ -61,17 +59,15 @@ const page = () => {
           >
             <img
               className="object-cover w-full h-56 md:h-64 xl:h-80"
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src={"/portfolio/adobe.jpg"}
               alt=""
             />
             <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
               <p className="mb-4 text-lg font-bold text-gray-100">
-                The Harvesters
+                Adobe photoshop
               </p>
               <p className="text-sm tracking-wide text-gray-300">
-                Bruegel’s fanfare for the common man is considered one of the
-                defining works of Western art. This composition was one of six
-                created on the theme of the seasons.
+              At ericktek, we harness the power of Adobe Photoshop, a versatile tool used for image editing, photo manipulation, and graphic design. Packed with advanced features for retouching, compositing, and creating digital artwork,
               </p>
             </div>
           </motion.div>
@@ -90,17 +86,15 @@ const page = () => {
           >
             <img
               className="object-cover w-full h-56 md:h-64 xl:h-80 "
-              src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src={"/portfolio/illustrator.jpg"}
               alt=""
             />
             <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
               <p className="mb-4 text-lg font-bold text-gray-100">
-                The Starry Night
+                Adobe illutrator
               </p>
               <p className="text-sm tracking-wide text-gray-300">
-                Vincent Van Gogh’s most popular painting, The Starry Night was
-                created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                committed himself in 1889.
+              In our arsenal, Adobe Illustrator takes center stage for vector graphics creation, illustration, and logo design. Renowned for its precision and scalability, Illustrator allows us to produce high-quality graphics for both print and digital media. 
               </p>
             </div>
           </motion.div>
@@ -115,16 +109,13 @@ const page = () => {
           >
             <img
               className="object-cover w-full h-56 md:h-64 xl:h-80 "
-              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src={"/portfolio/graphic-4.jpg"}
               alt=""
             />
             <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-              <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+              <p className="mb-4 text-lg font-bold text-gray-100">DaVinci Resolve</p>
               <p className="text-sm tracking-wide text-gray-300">
-                Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                Nouveau.
+              For video editing and color grading, we turn to DaVinci Resolve. This powerful software enhances the visual aesthetics of digital media content, making it a staple for professionals in the field. DaVinci Resolve enables us to achieve precise color adjustments and create visually stunning videos that captivate audiences.
               </p>
             </div>
           </motion.div>

@@ -43,18 +43,16 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80 "
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                alt=""
+                src={"/portfolio/erick.png"}
+                alt="post-1"
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
+                  Solutions offered
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
-                </p>
+                  
+                  ericktek provides expert solutions in design and build. Our services are designed to enhance user engagement, transform data into insights, and leverage intelligent systems for innovation. </p>
               </div>
             </div>
           </a>
@@ -65,16 +63,14 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80 "
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/reactjs.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">React</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
+                A powerful JavaScript library for building user interfaces, known for its efficiency and flexibility in developing interactive and dynamic web applications.
+
                 </p>
               </div>
             </div>
@@ -88,17 +84,16 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/smart2.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Starry Night
+                  Poster design
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Vincent Van Gogh’s most popular painting, The Starry Night was
-                  created by Van Gogh at the asylum in Saint-Rémy, where he’d
-                  committed himself in 1889.
+                specializes in creating captivating poster designs that grab attention and effectively convey messages.
+
                 </p>
               </div>
             </div>
@@ -107,16 +102,14 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/laravel.jpg"}
+
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                <p className="mb-4 text-lg font-bold text-gray-100">The Kiss</p>
+                <p className="mb-4 text-lg font-bold text-gray-100">Laravel</p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Opulently gilded and extravagantly patterned, The Kiss, Gustav
-                  Klimt’s fin-de-siècle portrayal of intimacy, is a mix of
-                  Symbolism and Vienna Jugendstil, the Austrian variant of Art
-                  Nouveau.
+                A robust PHP framework for web application development, offering elegant syntax, powerful tools, and comprehensive features for building modern web applications.
                 </p>
               </div>
             </div>
@@ -125,17 +118,15 @@ const page = () => {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src={"/portfolio/nextjs.png"}
                 alt=""
               />
               <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-4 text-lg font-bold text-gray-100">
-                  The Harvesters
+                  Nextjs
                 </p>
                 <p className="text-sm tracking-wide text-gray-300">
-                  Bruegel’s fanfare for the common man is considered one of the
-                  defining works of Western art. This composition was one of six
-                  created on the theme of the seasons.
+                A powerful React framework for building fast and scalable web applications with server-side rendering and static site generation capabilities.
                 </p>
               </div>
             </div>
@@ -154,17 +145,15 @@ const page = () => {
               <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                 <img
                   className="object-cover w-full h-56 md:h-64 xl:h-80"
-                  src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src={"/portfolio/django.png"}
                   alt=""
                 />
                 <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-4 text-lg font-bold text-gray-100">
-                    The Starry Night
+                    django
                   </p>
                   <p className="text-sm tracking-wide text-gray-300">
-                    Vincent Van Gogh’s most popular painting, The Starry Night
-                    was created by Van Gogh at the asylum in Saint-Rémy, where
-                    he’d committed himself in 1889.
+                  A high-level Python web framework that encourages rapid development and clean, pragmatic design. Django's robust features make it ideal for building secure and scalable web applications.
                   </p>
                 </div>
               </div>
@@ -173,18 +162,15 @@ const page = () => {
               <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                 <img
                   className="object-cover w-full h-56 md:h-64 xl:h-80"
-                  src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  src={"/portfolio/redmin.png"}
                   alt=""
                 />
                 <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-4 text-lg font-bold text-gray-100">
-                    The Kiss
+                    Poster Design
                   </p>
                   <p className="text-sm tracking-wide text-gray-300">
-                    Opulently gilded and extravagantly patterned, The Kiss,
-                    Gustav Klimt’s fin-de-siècle portrayal of intimacy, is a mix
-                    of Symbolism and Vienna Jugendstil, the Austrian variant of
-                    Art Nouveau.
+                  specializes in creating captivating poster designs that grab attention and effectively convey messages.
                   </p>
                 </div>
               </div>
