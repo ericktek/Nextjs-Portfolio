@@ -192,17 +192,28 @@ const NavbarNavigation = ({ children }) => {
                             Portfolio
                           </a>
                         </li>
-                        <li className="flex justify-center items-center  border border-orange-400 font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300 hover:text-white/20 active:border-blue-100 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white/50 dark:active:border-gray-600 p-2 rounded-sm ">
+                        <li className="font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300 hover:text-white/20 active:border-blue-100 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white/50 dark:active:border-gray-600 p-2 rounded-sm ">
                           <a className="scroll-smooth" href="/talk">
                             Let's Talk
                           </a>
                         </li>
                         {session.status === "authenticated" ? (
+
+                              <ul class="space-y-2">
+
+                            <li className="flex justify-center items-center  border border-orange-400 font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300 hover:text-white/20 active:border-blue-100 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white/50 dark:active:border-gray-600 p-2 rounded-sm">
+                              <a className="scroll-smooth font-light" href="/dashboard">
+                                Dashboard
+                              </a>
+                            </li>
+                          
                             <li className="flex justify-center items-center  bg-orange-400 font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300  active:border-blue-100 dark:text-gray-200 dark:hover:text-black hover:text-black dark:active:border-gray-600 p-2 rounded-sm ">
                               <a className="scroll-smooth font-light">
                                 <button onClick={signOut}>Logout</button>
                               </a>
                             </li>
+                                                  </ul>
+
                           ) : (
                             <li className="flex justify-center items-center  bg-orange-400 font-thin duration-200 focus:shadow-outline cursor-pointer hover:translate-x-2 text-gray-300  active:border-blue-100 dark:text-gray-200 dark:hover:text-black hover:text-black dark:active:border-gray-600 p-2 rounded-sm ">
                               <a className="scroll-smooth font-light" href="/dashboard">
