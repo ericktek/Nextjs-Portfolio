@@ -37,7 +37,7 @@ const SplitLongParagraphs = ({ children }) => {
       {paragraphChunks.map((chunk, index) => (
         <p
           key={index}
-          className="leading-relaxed text-normal text-gray-300 text-justify mt-2 break-words"
+          className="text-normal text-gray-300 text-justify mt-2 break-words"
         >
           {chunk}
         </p>
