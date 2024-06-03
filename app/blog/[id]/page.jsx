@@ -116,7 +116,6 @@ const SinglePage = ({ params }) => {
                 src="/avatar.png"
                 alt="avatar"
               />
-              {session && (
                 <div className="mx-4">
                   <h1 className="text-sm text-gray-700 dark:text-gray-200">
                   {postData.username}
@@ -125,7 +124,7 @@ const SinglePage = ({ params }) => {
                   {postData.email}
                   </p>
                 </div>
-              )}
+              
             </div>
             <div className="flex">
               <span className="text-xs text-gray-500 ">
