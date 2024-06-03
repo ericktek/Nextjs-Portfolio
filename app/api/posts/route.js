@@ -14,6 +14,7 @@ export const GET = async (request) => {
 
         const posts = await Post.find(username && {username}).sort({ createdAt: -1 });
 
+        console.log(posts);
 
         // Map posts to include creator's information
       const postsWithCreator = posts.map(post => ({
