@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { useSession } from "next-auth/react";
 
 async function fetchPostData(id) {
-  const res = await fetch(`https://ericktek.vercel.app/api/posts/${id}`, {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
     cache: "no-store",
   });
 
@@ -119,10 +119,10 @@ const SinglePage = ({ params }) => {
               {session && (
                 <div className="mx-4">
                   <h1 className="text-sm text-gray-700 dark:text-gray-200">
-                    {session.user.name}
+                  {postData.username}
                   </h1>
                   <p className="text-xs text-gray-500 dark:text-gray-400">
-                    {session.user.email}
+                  {postData.email}
                   </p>
                 </div>
               )}

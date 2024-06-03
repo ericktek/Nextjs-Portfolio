@@ -1,12 +1,11 @@
-'use client'
+'use client';
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { notFound } from "next/navigation";
 import Footer from 'app/components/Footer';
 import { useSession } from "next-auth/react";
 
 const fetchPosts = async () => {
-  const res = await fetch(`https://ericktek.vercel.app/api/posts`, {
+  const res = await fetch(`http://localhost:3000/api/posts`, {
     cache: "no-store",
   });
 
@@ -14,12 +13,27 @@ const fetchPosts = async () => {
     throw new Error('Failed to fetch posts');
   }
 
-  return res.json();
+  const data = await res.json();
+  if (!data || data.length === 0) {
+    throw new Error('No posts found');
+  }
+
+  return data;
 };
+
+const NotFound = () => (
+  <div className="container py-12 px-6 lg:py-20 sm:py-12 mx-auto max-w-5xl text-center">
+    <h1 className="text-4xl font-bold mb-6">Page Not Found</h1>
+    <p className="text-xl mb-6">The page you are looking for does not exist.</p>
+    <p className="text-md mb-2">Check your internet connection.</p>
+    <a href="/" className="text-blue-500 underline">Go back to homepage</a>
+  </div>
+);
 
 const Page = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const { data: session, status } = useSession();
 
   useEffect(() => {
@@ -28,9 +42,8 @@ const Page = () => {
         const data = await fetchPosts();
         setPosts(data);
       } catch (error) {
-        console.error(error);
-        
-        notFound();
+        console.error('Error loading posts:', error);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -41,6 +54,10 @@ const Page = () => {
 
   if (loading) {
     return <p className="container py-12 px-6 lg:py-20 sm:py-12 mx-auto max-w-5xl">Loading...</p>;
+  }
+
+  if (error) {
+    return <NotFound />;
   }
 
   return (
@@ -60,7 +77,7 @@ const Page = () => {
               height={500}
               className="bg-black bg-opacity-75 object-fill w-full h-32 xl:h-56 lg:h-56 md:h-48 sm:h-40 rounded-lg px-6 my-24"
               src="/logo.svg"
-              alt=""
+              alt="Blog-image"
             />
           </div>
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
@@ -97,7 +114,7 @@ const Page = () => {
                     <div className="relative mt-8 flex items-center gap-x-4">
                       <Image
                         src="/avatar.png"
-                        alt={item.post}
+                        alt="avatar"
                         width={50}
                         height={50}
                         className="h-10 w-10 opacity-80 rounded-full object-cover bg-gray-50"
